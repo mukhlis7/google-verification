@@ -30,7 +30,3 @@ def index():
 		return redirect("http://www.google.com")
 		
 	return render_template('index.html')
-
-
-if __name__ == "__main__":
-    app.run()
